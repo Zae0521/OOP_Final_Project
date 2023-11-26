@@ -65,6 +65,7 @@
 			btnEditCourses.Text = "Edit Courses";
 			btnEditCourses.UseVisualStyleBackColor = true;
 			btnEditCourses.Visible = false;
+			btnEditCourses.Click += btnEditCourses_Click;
 			// 
 			// btnEditStudentSchedule
 			// 

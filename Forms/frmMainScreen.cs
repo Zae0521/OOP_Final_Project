@@ -64,5 +64,12 @@ namespace OOP_Final_Project_Team3
 			studentSelect.ShowDialog();
 			this.Close();
 		}
+
+		private void btnEditCourses_Click(object sender, EventArgs e)
+		{
+			frmCourseEdit_Add courseEdit_Add = new frmCourseEdit_Add();
+			courseEdit_Add.ShowDialog();
+			this.Close();
+		}
 	}
 }
