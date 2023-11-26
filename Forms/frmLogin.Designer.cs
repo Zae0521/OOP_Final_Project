@@ -98,6 +98,7 @@
 			AcceptButton = btnLogin;
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = Color.FromArgb(215, 192, 255);
 			ClientSize = new Size(303, 257);
 			Controls.Add(lblRegister);
 			Controls.Add(txtPass);

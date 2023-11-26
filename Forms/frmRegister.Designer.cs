@@ -119,6 +119,7 @@
 			AcceptButton = btnRegister;
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = Color.FromArgb(215, 192, 255);
 			ClientSize = new Size(207, 217);
 			Controls.Add(btnRegister);
 			Controls.Add(txtUser);

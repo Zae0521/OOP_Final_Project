@@ -95,6 +95,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = Color.FromArgb(215, 192, 255);
 			ClientSize = new Size(376, 79);
 			Controls.Add(btnEditStudentSchedule);
 			Controls.Add(btnEditCourses);
