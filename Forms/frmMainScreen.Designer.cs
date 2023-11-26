@@ -55,6 +55,7 @@
 			btnAddDropCourse.Text = "Add/Drop Courses";
 			btnAddDropCourse.UseVisualStyleBackColor = true;
 			btnAddDropCourse.Visible = false;
+			btnAddDropCourse.Click += btnAddDropCourse_Click;
 			// 
 			// btnEditCourses
 			// 
@@ -76,6 +77,7 @@
 			btnEditStudentSchedule.Text = "Edit Student Schedule";
 			btnEditStudentSchedule.UseVisualStyleBackColor = true;
 			btnEditStudentSchedule.Visible = false;
+			btnEditStudentSchedule.Click += btnEditStudentSchedule_Click;
 			// 
 			// btnUpdateStudent
 			// 

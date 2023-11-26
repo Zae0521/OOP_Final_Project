@@ -55,21 +55,30 @@ namespace OOP_Final_Project_Team3
 		{
 			frmEditUserInfo edit = new frmEditUserInfo(User, "student");
 			edit.ShowDialog();
-			this.Close();
 		}
 
 		private void btnUpdateStudent_Click(object sender, EventArgs e)
 		{
 			frmStudentSelect studentSelect = new frmStudentSelect();
 			studentSelect.ShowDialog();
-			this.Close();
 		}
 
 		private void btnEditCourses_Click(object sender, EventArgs e)
 		{
 			frmCourseEdit_Add courseEdit_Add = new frmCourseEdit_Add();
 			courseEdit_Add.ShowDialog();
-			this.Close();
+		}
+
+		private void btnEditStudentSchedule_Click(object sender, EventArgs e)
+		{
+			frmStudentSchedule_StudentSelector schStudentSelect = new frmStudentSchedule_StudentSelector();
+			schStudentSelect.ShowDialog();
+		}
+
+		private void btnAddDropCourse_Click(object sender, EventArgs e)
+		{
+			frmStudentScheduleEdit SchEdit = new frmStudentScheduleEdit(User);
+			SchEdit.ShowDialog();
 		}
 	}
 }
