@@ -40,7 +40,7 @@
 			// 
 			btnUpdateUser.Image = Properties.Resources.user_interface;
 			btnUpdateUser.ImageAlign = ContentAlignment.MiddleLeft;
-			btnUpdateUser.Location = new Point(8, 43);
+			btnUpdateUser.Location = new Point(8, 4);
 			btnUpdateUser.Name = "btnUpdateUser";
 			btnUpdateUser.Size = new Size(185, 33);
 			btnUpdateUser.TabIndex = 1;
@@ -66,7 +66,7 @@
 			// 
 			btnEditCourses.Image = Properties.Resources.refresh__1_;
 			btnEditCourses.ImageAlign = ContentAlignment.MiddleLeft;
-			btnEditCourses.Location = new Point(8, 4);
+			btnEditCourses.Location = new Point(8, 43);
 			btnEditCourses.Name = "btnEditCourses";
 			btnEditCourses.Size = new Size(185, 33);
 			btnEditCourses.TabIndex = 3;
@@ -90,7 +90,7 @@
 			// 
 			// btnUpdateStudent
 			// 
-			btnUpdateStudent.Image = Properties.Resources.refresh__1_;
+			btnUpdateStudent.Image = Properties.Resources.user_interface;
 			btnUpdateStudent.ImageAlign = ContentAlignment.MiddleLeft;
 			btnUpdateStudent.Location = new Point(8, 4);
 			btnUpdateStudent.Name = "btnUpdateStudent";
