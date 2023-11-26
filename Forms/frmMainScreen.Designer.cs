@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainScreen));
 			btnUpdateUser = new Button();
 			btnAddDropCourse = new Button();
 			btnEditCourses = new Button();
@@ -100,7 +101,9 @@
 			Controls.Add(btnAddDropCourse);
 			Controls.Add(btnUpdateUser);
 			Controls.Add(btnUpdateStudent);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmMainScreen";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Registration Landing Page";
 			Load += frmMainScreen_Load;
 			ResumeLayout(false);

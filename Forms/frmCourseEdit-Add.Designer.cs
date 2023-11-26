@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCourseEdit_Add));
 			dgvCourses = new DataGridView();
 			courseIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
 			SectionID = new DataGridViewTextBoxColumn();
@@ -293,7 +294,9 @@
 			Controls.Add(txtCourseID);
 			Controls.Add(btnUpdate);
 			Controls.Add(dgvCourses);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmCourseEdit_Add";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Registration System Course Edit/Add";
 			Load += frmCourseEdit_Add_Load;
 			((System.ComponentModel.ISupportInitialize)dgvCourses).EndInit();

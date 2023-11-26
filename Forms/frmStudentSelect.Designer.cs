@@ -29,14 +29,15 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentSelect));
 			dgvStudents = new DataGridView();
-			userBindingSource = new BindingSource(components);
-			btnUpdate = new Button();
 			userNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
 			passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
 			firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
 			lastNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
 			roleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+			userBindingSource = new BindingSource(components);
+			btnUpdate = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
 			((System.ComponentModel.ISupportInitialize)userBindingSource).BeginInit();
 			SuspendLayout();
@@ -57,20 +58,6 @@
 			dgvStudents.ShowEditingIcon = false;
 			dgvStudents.Size = new Size(609, 410);
 			dgvStudents.TabIndex = 0;
-			// 
-			// userBindingSource
-			// 
-			userBindingSource.DataSource = typeof(User);
-			// 
-			// btnUpdate
-			// 
-			btnUpdate.Location = new Point(626, 52);
-			btnUpdate.Name = "btnUpdate";
-			btnUpdate.Size = new Size(97, 23);
-			btnUpdate.TabIndex = 1;
-			btnUpdate.Text = "Update Info";
-			btnUpdate.UseVisualStyleBackColor = true;
-			btnUpdate.Click += btnUpdate_Click;
 			// 
 			// userNameDataGridViewTextBoxColumn
 			// 
@@ -108,6 +95,20 @@
 			roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
 			roleDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
+			// userBindingSource
+			// 
+			userBindingSource.DataSource = typeof(User);
+			// 
+			// btnUpdate
+			// 
+			btnUpdate.Location = new Point(626, 52);
+			btnUpdate.Name = "btnUpdate";
+			btnUpdate.Size = new Size(97, 23);
+			btnUpdate.TabIndex = 1;
+			btnUpdate.Text = "Update Info";
+			btnUpdate.UseVisualStyleBackColor = true;
+			btnUpdate.Click += btnUpdate_Click;
+			// 
 			// frmStudentSelect
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -115,7 +116,9 @@
 			ClientSize = new Size(735, 450);
 			Controls.Add(btnUpdate);
 			Controls.Add(dgvStudents);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmStudentSelect";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Registration Edit Account Selector";
 			Load += frmStudentSelect_Load;
 			((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();

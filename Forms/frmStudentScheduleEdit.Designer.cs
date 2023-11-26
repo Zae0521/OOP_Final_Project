@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentScheduleEdit));
 			dgvCourses = new DataGridView();
 			courseIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
 			sectionIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -197,7 +198,9 @@
 			Controls.Add(btnAddToSchedule);
 			Controls.Add(dgvStudentSchedule);
 			Controls.Add(dgvCourses);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmStudentScheduleEdit";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Schedule Edit";
 			Load += frmStudentScheduleEdit_Load;
 			((System.ComponentModel.ISupportInitialize)dgvCourses).EndInit();

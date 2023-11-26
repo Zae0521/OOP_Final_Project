@@ -90,7 +90,7 @@ namespace OOP_Final_Project_Team3.Forms
 				sectionidd = dgvStudentSchedule.CurrentRow.Cells[2].Value.ToString();
 
 				await using var conn = new SqliteConnection($"Data Source={db}");
-				
+
 				var sql = $"DELETE FROM StudentSchedule WHERE UserID = '{user.UserName}' AND CourseID = '{coursee}' AND SectionID = '{sectionidd}'";
 				var res = conn.Execute(sql);
 

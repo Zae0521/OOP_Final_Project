@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditUserInfo));
 			txtUserID = new TextBox();
 			txtPassword = new TextBox();
 			txtFirst = new TextBox();
@@ -141,7 +142,9 @@
 			Controls.Add(txtFirst);
 			Controls.Add(txtPassword);
 			Controls.Add(txtUserID);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmEditUserInfo";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Registration User Edit";
 			Load += frmEditUserInfo_Load;
 			ResumeLayout(false);

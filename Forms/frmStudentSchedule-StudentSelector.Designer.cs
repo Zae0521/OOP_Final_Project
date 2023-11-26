@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentSchedule_StudentSelector));
 			btnUpdateSch = new Button();
 			dgvStudentSchSelect = new DataGridView();
 			userNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -115,7 +116,9 @@
 			ClientSize = new Size(741, 451);
 			Controls.Add(btnUpdateSch);
 			Controls.Add(dgvStudentSchSelect);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmStudentSchedule_StudentSelector";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Student Schedule Selector";
 			Load += frmStudentSchedule_StudentSelector_Load;
 			((System.ComponentModel.ISupportInitialize)dgvStudentSchSelect).EndInit();
