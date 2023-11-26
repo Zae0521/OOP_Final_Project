@@ -48,7 +48,7 @@ namespace OOP_Final_Project_Team3.Forms
 			{
 				if (role != 1) { chkIsAdmin.Checked = false; } else { chkIsAdmin.Checked = true; }
 				chkIsAdmin.Enabled = false;
-				txtUserID.Enabled = false;
+				txtUserID.Enabled = true;
 
 			}
 			else
@@ -65,32 +65,10 @@ namespace OOP_Final_Project_Team3.Forms
 
 			if ((txtPassword.Text is not null && txtPassword.Text != "") && (txtUserID.Text is not null && txtUserID.Text != ""))
 			{
-				if (txtUserID.Text != username)
-				{
-					if (txtFirst.Text == frstname && txtLast.Text == lastname && txtPassword.Text == password)
-					{
-						var sql = $"UPDATE Users set UserName = '{txtUserID.Text}' WHERE Password = '{password}' and FirstName = '{frstname}' and LastName = '{lastname}'";
+				var newRole = -1;
+					if (chkIsAdmin.Checked) { newRole = 1; } else { newRole = 2; }
 
-						var res = conn.Execute(sql);
-
-						if (res != null)
-						{
-							MessageBox.Show($"Updated Successfully.");
-
-						}
-						else { MessageBox.Show("Account Does Not Exist, or Error in UserName/Password", "Error"); }
-					}
-					else
-					{ MessageBox.Show("To Change a UserName: the First Name, Last Name, and The Password cannot be changed at the same time."); }
-
-
-				}
-
-				else
-				{
-					if (chkIsAdmin.Checked) { role = 1; } else { role = 2; }
-
-					var sql = $"UPDATE Users set Password = '{txtPassword.Text}', FirstName = '{frstname}', LastName = '{lastname}', role = {role} WHERE UserName = '{username}'";
+					var sql = $"UPDATE Users set Password = '{txtPassword.Text}', FirstName = '{txtFirst.Text}', LastName = '{txtLast.Text}', role = {newRole}, UserName= '{txtUserID.Text}' WHERE UserName = '{username}'";
 
 					var res = conn.Execute(sql);
 
@@ -100,7 +78,7 @@ namespace OOP_Final_Project_Team3.Forms
 
 					}
 					else { MessageBox.Show("Account Does Not Exist, or Error in UserName/Password", "Error"); }
-				}
+				
 			}
 			else
 			{
