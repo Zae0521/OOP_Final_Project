@@ -44,11 +44,14 @@
 			// 
 			// btnUpdateSch
 			// 
+			btnUpdateSch.Image = Properties.Resources.refresh__1_;
+			btnUpdateSch.ImageAlign = ContentAlignment.MiddleLeft;
 			btnUpdateSch.Location = new Point(626, 52);
 			btnUpdateSch.Name = "btnUpdateSch";
-			btnUpdateSch.Size = new Size(110, 23);
+			btnUpdateSch.Size = new Size(121, 31);
 			btnUpdateSch.TabIndex = 3;
 			btnUpdateSch.Text = "Update Schedule";
+			btnUpdateSch.TextAlign = ContentAlignment.MiddleRight;
 			btnUpdateSch.UseVisualStyleBackColor = true;
 			btnUpdateSch.Click += btnUpdateSch_Click;
 			// 
@@ -114,7 +117,7 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
-			ClientSize = new Size(741, 451);
+			ClientSize = new Size(770, 451);
 			Controls.Add(btnUpdateSch);
 			Controls.Add(dgvStudentSchSelect);
 			Icon = (Icon)resources.GetObject("$this.Icon");

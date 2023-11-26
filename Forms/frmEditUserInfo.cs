@@ -48,6 +48,7 @@ namespace OOP_Final_Project_Team3.Forms
 			{
 				if (role != 1) { chkIsAdmin.Checked = false; } else { chkIsAdmin.Checked = true; }
 				chkIsAdmin.Enabled = false;
+				chkIsAdmin.Visible = false;
 				txtUserID.Enabled = true;
 
 			}
@@ -55,6 +56,7 @@ namespace OOP_Final_Project_Team3.Forms
 			{
 				if (role != 1) { chkIsAdmin.Checked = false; } else { chkIsAdmin.Checked = true; }
 				chkIsAdmin.Enabled = true;
+				chkIsAdmin.Visible = true;
 				txtUserID.Enabled = true;
 			}
 		}

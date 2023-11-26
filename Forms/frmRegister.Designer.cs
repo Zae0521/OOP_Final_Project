@@ -43,7 +43,7 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(11, 17);
+			label1.Location = new Point(43, 42);
 			label1.Name = "label1";
 			label1.Size = new Size(68, 15);
 			label1.TabIndex = 0;
@@ -52,7 +52,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(19, 57);
+			label2.Location = new Point(51, 82);
 			label2.Name = "label2";
 			label2.Size = new Size(60, 15);
 			label2.TabIndex = 1;
@@ -61,7 +61,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(12, 97);
+			label3.Location = new Point(44, 122);
 			label3.Name = "label3";
 			label3.Size = new Size(67, 15);
 			label3.TabIndex = 2;
@@ -70,7 +70,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(13, 137);
+			label4.Location = new Point(45, 162);
 			label4.Name = "label4";
 			label4.Size = new Size(66, 15);
 			label4.TabIndex = 3;
@@ -78,37 +78,39 @@
 			// 
 			// txtLastName
 			// 
-			txtLastName.Location = new Point(85, 134);
+			txtLastName.Location = new Point(117, 159);
 			txtLastName.Name = "txtLastName";
 			txtLastName.Size = new Size(100, 23);
 			txtLastName.TabIndex = 3;
 			// 
 			// txtFrstName
 			// 
-			txtFrstName.Location = new Point(85, 94);
+			txtFrstName.Location = new Point(117, 119);
 			txtFrstName.Name = "txtFrstName";
 			txtFrstName.Size = new Size(100, 23);
 			txtFrstName.TabIndex = 2;
 			// 
 			// txtPass
 			// 
-			txtPass.Location = new Point(85, 54);
+			txtPass.Location = new Point(117, 79);
 			txtPass.Name = "txtPass";
 			txtPass.Size = new Size(100, 23);
 			txtPass.TabIndex = 1;
 			// 
 			// txtUser
 			// 
-			txtUser.Location = new Point(85, 14);
+			txtUser.Location = new Point(117, 39);
 			txtUser.Name = "txtUser";
 			txtUser.Size = new Size(100, 23);
 			txtUser.TabIndex = 0;
 			// 
 			// btnRegister
 			// 
-			btnRegister.Location = new Point(51, 178);
+			btnRegister.Image = Properties.Resources.notes;
+			btnRegister.ImageAlign = ContentAlignment.MiddleLeft;
+			btnRegister.Location = new Point(83, 192);
 			btnRegister.Name = "btnRegister";
-			btnRegister.Size = new Size(75, 23);
+			btnRegister.Size = new Size(92, 31);
 			btnRegister.TabIndex = 4;
 			btnRegister.Text = "Register";
 			btnRegister.UseVisualStyleBackColor = true;
@@ -120,7 +122,7 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
-			ClientSize = new Size(207, 217);
+			ClientSize = new Size(265, 256);
 			Controls.Add(btnRegister);
 			Controls.Add(txtUser);
 			Controls.Add(txtPass);

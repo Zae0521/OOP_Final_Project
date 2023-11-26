@@ -62,6 +62,8 @@
 			// 
 			// dgvCourses
 			// 
+			dgvCourses.AllowUserToAddRows = false;
+			dgvCourses.AllowUserToDeleteRows = false;
 			dgvCourses.AutoGenerateColumns = false;
 			dgvCourses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 			dgvCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -70,6 +72,7 @@
 			dgvCourses.Location = new Point(12, 12);
 			dgvCourses.MultiSelect = false;
 			dgvCourses.Name = "dgvCourses";
+			dgvCourses.ReadOnly = true;
 			dgvCourses.RowTemplate.Height = 25;
 			dgvCourses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			dgvCourses.Size = new Size(920, 355);
@@ -81,6 +84,7 @@
 			courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
 			courseIDDataGridViewTextBoxColumn.HeaderText = "Course ID";
 			courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+			courseIDDataGridViewTextBoxColumn.ReadOnly = true;
 			courseIDDataGridViewTextBoxColumn.Width = 83;
 			// 
 			// SectionID
@@ -88,6 +92,7 @@
 			SectionID.DataPropertyName = "SectionID";
 			SectionID.HeaderText = "Section ID";
 			SectionID.Name = "SectionID";
+			SectionID.ReadOnly = true;
 			SectionID.Width = 85;
 			// 
 			// courseTitleDataGridViewTextBoxColumn
@@ -95,6 +100,7 @@
 			courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
 			courseTitleDataGridViewTextBoxColumn.HeaderText = "Course Title";
 			courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
+			courseTitleDataGridViewTextBoxColumn.ReadOnly = true;
 			courseTitleDataGridViewTextBoxColumn.Width = 94;
 			// 
 			// professorDataGridViewTextBoxColumn
@@ -102,6 +108,7 @@
 			professorDataGridViewTextBoxColumn.DataPropertyName = "Professor";
 			professorDataGridViewTextBoxColumn.HeaderText = "Professor";
 			professorDataGridViewTextBoxColumn.Name = "professorDataGridViewTextBoxColumn";
+			professorDataGridViewTextBoxColumn.ReadOnly = true;
 			professorDataGridViewTextBoxColumn.Width = 81;
 			// 
 			// meetingTimesDataGridViewTextBoxColumn
@@ -109,6 +116,7 @@
 			meetingTimesDataGridViewTextBoxColumn.DataPropertyName = "MeetingTimes";
 			meetingTimesDataGridViewTextBoxColumn.HeaderText = "Meeting Times";
 			meetingTimesDataGridViewTextBoxColumn.Name = "meetingTimesDataGridViewTextBoxColumn";
+			meetingTimesDataGridViewTextBoxColumn.ReadOnly = true;
 			meetingTimesDataGridViewTextBoxColumn.Width = 110;
 			// 
 			// startDateDataGridViewTextBoxColumn
@@ -116,6 +124,7 @@
 			startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
 			startDateDataGridViewTextBoxColumn.HeaderText = "Start Date";
 			startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+			startDateDataGridViewTextBoxColumn.ReadOnly = true;
 			startDateDataGridViewTextBoxColumn.Width = 83;
 			// 
 			// endDateDataGridViewTextBoxColumn
@@ -123,6 +132,7 @@
 			endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
 			endDateDataGridViewTextBoxColumn.HeaderText = "End Date";
 			endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+			endDateDataGridViewTextBoxColumn.ReadOnly = true;
 			endDateDataGridViewTextBoxColumn.Width = 79;
 			// 
 			// coursesBindingSource
@@ -131,9 +141,11 @@
 			// 
 			// btnUpdate
 			// 
+			btnUpdate.Image = Properties.Resources.refresh__1_;
+			btnUpdate.ImageAlign = ContentAlignment.MiddleLeft;
 			btnUpdate.Location = new Point(474, 466);
 			btnUpdate.Name = "btnUpdate";
-			btnUpdate.Size = new Size(97, 23);
+			btnUpdate.Size = new Size(128, 32);
 			btnUpdate.TabIndex = 9;
 			btnUpdate.Text = "Update Course";
 			btnUpdate.UseVisualStyleBackColor = true;
@@ -253,9 +265,11 @@
 			// 
 			// btnAddCourse
 			// 
-			btnAddCourse.Location = new Point(371, 466);
+			btnAddCourse.Image = Properties.Resources.add__1_;
+			btnAddCourse.ImageAlign = ContentAlignment.MiddleLeft;
+			btnAddCourse.Location = new Point(349, 466);
 			btnAddCourse.Name = "btnAddCourse";
-			btnAddCourse.Size = new Size(97, 23);
+			btnAddCourse.Size = new Size(119, 32);
 			btnAddCourse.TabIndex = 8;
 			btnAddCourse.Text = "Add Course";
 			btnAddCourse.UseVisualStyleBackColor = true;
@@ -263,9 +277,11 @@
 			// 
 			// btnInsertCourse
 			// 
-			btnInsertCourse.Location = new Point(371, 466);
+			btnInsertCourse.Image = Properties.Resources.above;
+			btnInsertCourse.ImageAlign = ContentAlignment.MiddleRight;
+			btnInsertCourse.Location = new Point(349, 466);
 			btnInsertCourse.Name = "btnInsertCourse";
-			btnInsertCourse.Size = new Size(97, 23);
+			btnInsertCourse.Size = new Size(119, 32);
 			btnInsertCourse.TabIndex = 8;
 			btnInsertCourse.Text = "Insert Course";
 			btnInsertCourse.UseVisualStyleBackColor = true;
@@ -276,7 +292,7 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
-			ClientSize = new Size(955, 501);
+			ClientSize = new Size(955, 514);
 			Controls.Add(btnAddCourse);
 			Controls.Add(btnInsertCourse);
 			Controls.Add(label7);

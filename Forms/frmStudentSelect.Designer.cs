@@ -101,11 +101,14 @@
 			// 
 			// btnUpdate
 			// 
+			btnUpdate.Image = Properties.Resources.refresh__1_;
+			btnUpdate.ImageAlign = ContentAlignment.MiddleLeft;
 			btnUpdate.Location = new Point(626, 52);
 			btnUpdate.Name = "btnUpdate";
-			btnUpdate.Size = new Size(97, 23);
+			btnUpdate.Size = new Size(95, 32);
 			btnUpdate.TabIndex = 1;
 			btnUpdate.Text = "Update Info";
+			btnUpdate.TextAlign = ContentAlignment.MiddleRight;
 			btnUpdate.UseVisualStyleBackColor = true;
 			btnUpdate.Click += btnUpdate_Click;
 			// 
@@ -114,7 +117,7 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
-			ClientSize = new Size(735, 450);
+			ClientSize = new Size(748, 450);
 			Controls.Add(btnUpdate);
 			Controls.Add(dgvStudents);
 			Icon = (Icon)resources.GetObject("$this.Icon");

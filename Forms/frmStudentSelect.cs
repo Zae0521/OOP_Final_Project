@@ -51,9 +51,9 @@ namespace OOP_Final_Project_Team3.Forms
 				{
 					//MessageBox.Show($"{res.First().FirstName} { res.First().LastName} {res.First().UserName} {res.First().Password} {res.First().Role}");
 					userSelected = res.First();
+					this.Close();
 					frmEditUserInfo editInfo = new frmEditUserInfo(userSelected, "admin");
 					editInfo.Show();
-					this.Close();
 				}
 
 

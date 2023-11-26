@@ -131,7 +131,7 @@
 			dgvStudentSchedule.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvStudentSchedule.Columns.AddRange(new DataGridViewColumn[] { userIDDataGridViewTextBoxColumn, courseIDDataGridViewTextBoxColumn1, sectionIDDataGridViewTextBoxColumn1 });
 			dgvStudentSchedule.DataSource = studentScheduleBindingSource;
-			dgvStudentSchedule.Location = new Point(50, 238);
+			dgvStudentSchedule.Location = new Point(12, 222);
 			dgvStudentSchedule.Name = "dgvStudentSchedule";
 			dgvStudentSchedule.ReadOnly = true;
 			dgvStudentSchedule.RowTemplate.Height = 25;
@@ -171,9 +171,11 @@
 			// 
 			// btnAddToSchedule
 			// 
-			btnAddToSchedule.Location = new Point(769, 38);
+			btnAddToSchedule.Image = Properties.Resources.add__1_;
+			btnAddToSchedule.ImageAlign = ContentAlignment.MiddleLeft;
+			btnAddToSchedule.Location = new Point(764, 12);
 			btnAddToSchedule.Name = "btnAddToSchedule";
-			btnAddToSchedule.Size = new Size(107, 23);
+			btnAddToSchedule.Size = new Size(134, 31);
 			btnAddToSchedule.TabIndex = 2;
 			btnAddToSchedule.Text = "Add To Schedule";
 			btnAddToSchedule.UseVisualStyleBackColor = true;
@@ -181,9 +183,11 @@
 			// 
 			// btnDeleteCourseFromSchedule
 			// 
-			btnDeleteCourseFromSchedule.Location = new Point(486, 255);
+			btnDeleteCourseFromSchedule.Image = Properties.Resources.remove;
+			btnDeleteCourseFromSchedule.ImageAlign = ContentAlignment.MiddleLeft;
+			btnDeleteCourseFromSchedule.Location = new Point(438, 222);
 			btnDeleteCourseFromSchedule.Name = "btnDeleteCourseFromSchedule";
-			btnDeleteCourseFromSchedule.Size = new Size(141, 23);
+			btnDeleteCourseFromSchedule.Size = new Size(181, 31);
 			btnDeleteCourseFromSchedule.TabIndex = 3;
 			btnDeleteCourseFromSchedule.Text = "Remove From Schedule";
 			btnDeleteCourseFromSchedule.UseVisualStyleBackColor = true;
@@ -194,7 +198,7 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
-			ClientSize = new Size(887, 450);
+			ClientSize = new Size(905, 408);
 			Controls.Add(btnDeleteCourseFromSchedule);
 			Controls.Add(btnAddToSchedule);
 			Controls.Add(dgvStudentSchedule);

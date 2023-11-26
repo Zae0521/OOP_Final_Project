@@ -38,9 +38,11 @@
 			// 
 			// btnUpdateUser
 			// 
-			btnUpdateUser.Location = new Point(8, 14);
+			btnUpdateUser.Image = Properties.Resources.user_interface;
+			btnUpdateUser.ImageAlign = ContentAlignment.MiddleLeft;
+			btnUpdateUser.Location = new Point(8, 43);
 			btnUpdateUser.Name = "btnUpdateUser";
-			btnUpdateUser.Size = new Size(185, 23);
+			btnUpdateUser.Size = new Size(185, 33);
 			btnUpdateUser.TabIndex = 1;
 			btnUpdateUser.Text = "Update User Information";
 			btnUpdateUser.UseVisualStyleBackColor = true;
@@ -49,9 +51,11 @@
 			// 
 			// btnAddDropCourse
 			// 
-			btnAddDropCourse.Location = new Point(199, 14);
+			btnAddDropCourse.Image = Properties.Resources.add__1_;
+			btnAddDropCourse.ImageAlign = ContentAlignment.MiddleLeft;
+			btnAddDropCourse.Location = new Point(199, 4);
 			btnAddDropCourse.Name = "btnAddDropCourse";
-			btnAddDropCourse.Size = new Size(166, 23);
+			btnAddDropCourse.Size = new Size(166, 33);
 			btnAddDropCourse.TabIndex = 2;
 			btnAddDropCourse.Text = "Add/Drop Courses";
 			btnAddDropCourse.UseVisualStyleBackColor = true;
@@ -60,9 +64,11 @@
 			// 
 			// btnEditCourses
 			// 
-			btnEditCourses.Location = new Point(33, 43);
+			btnEditCourses.Image = Properties.Resources.refresh__1_;
+			btnEditCourses.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditCourses.Location = new Point(8, 4);
 			btnEditCourses.Name = "btnEditCourses";
-			btnEditCourses.Size = new Size(160, 23);
+			btnEditCourses.Size = new Size(185, 33);
 			btnEditCourses.TabIndex = 3;
 			btnEditCourses.Text = "Edit Courses";
 			btnEditCourses.UseVisualStyleBackColor = true;
@@ -71,9 +77,11 @@
 			// 
 			// btnEditStudentSchedule
 			// 
+			btnEditStudentSchedule.Image = Properties.Resources.graduated;
+			btnEditStudentSchedule.ImageAlign = ContentAlignment.MiddleLeft;
 			btnEditStudentSchedule.Location = new Point(199, 43);
 			btnEditStudentSchedule.Name = "btnEditStudentSchedule";
-			btnEditStudentSchedule.Size = new Size(148, 23);
+			btnEditStudentSchedule.Size = new Size(165, 33);
 			btnEditStudentSchedule.TabIndex = 4;
 			btnEditStudentSchedule.Text = "Edit Student Schedule";
 			btnEditStudentSchedule.UseVisualStyleBackColor = true;
@@ -82,11 +90,14 @@
 			// 
 			// btnUpdateStudent
 			// 
-			btnUpdateStudent.Location = new Point(8, 14);
+			btnUpdateStudent.Image = Properties.Resources.refresh__1_;
+			btnUpdateStudent.ImageAlign = ContentAlignment.MiddleLeft;
+			btnUpdateStudent.Location = new Point(8, 4);
 			btnUpdateStudent.Name = "btnUpdateStudent";
-			btnUpdateStudent.Size = new Size(185, 23);
+			btnUpdateStudent.Size = new Size(185, 33);
 			btnUpdateStudent.TabIndex = 5;
 			btnUpdateStudent.Text = "Update Student Information";
+			btnUpdateStudent.TextAlign = ContentAlignment.MiddleRight;
 			btnUpdateStudent.UseVisualStyleBackColor = true;
 			btnUpdateStudent.Visible = false;
 			btnUpdateStudent.Click += btnUpdateStudent_Click;

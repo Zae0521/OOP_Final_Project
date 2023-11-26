@@ -18,8 +18,7 @@ namespace OOP_Final_Project_Team3
 
 		private void lblRegister_Click(object sender, EventArgs e)
 		{
-			new frmRegister().Show();
-			this.Hide();
+			new frmRegister().ShowDialog();
 		}
 
 		private async void btnLogin_Click(object sender, EventArgs e)

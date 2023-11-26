@@ -39,9 +39,11 @@
 			// 
 			// btnLogin
 			// 
-			btnLogin.Location = new Point(107, 138);
+			btnLogin.Image = Properties.Resources.user_interface;
+			btnLogin.ImageAlign = ContentAlignment.MiddleLeft;
+			btnLogin.Location = new Point(95, 114);
 			btnLogin.Name = "btnLogin";
-			btnLogin.Size = new Size(75, 23);
+			btnLogin.Size = new Size(80, 30);
 			btnLogin.TabIndex = 0;
 			btnLogin.Text = "Login";
 			btnLogin.UseVisualStyleBackColor = true;
@@ -50,7 +52,7 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(60, 56);
+			label1.Location = new Point(46, 44);
 			label1.Name = "label1";
 			label1.Size = new Size(68, 15);
 			label1.TabIndex = 1;
@@ -59,7 +61,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(68, 88);
+			label2.Location = new Point(54, 76);
 			label2.Name = "label2";
 			label2.Size = new Size(60, 15);
 			label2.TabIndex = 2;
@@ -67,14 +69,14 @@
 			// 
 			// txtUser
 			// 
-			txtUser.Location = new Point(135, 53);
+			txtUser.Location = new Point(121, 41);
 			txtUser.Name = "txtUser";
 			txtUser.Size = new Size(100, 23);
 			txtUser.TabIndex = 3;
 			// 
 			// txtPass
 			// 
-			txtPass.Location = new Point(134, 85);
+			txtPass.Location = new Point(120, 73);
 			txtPass.Name = "txtPass";
 			txtPass.PasswordChar = '*';
 			txtPass.Size = new Size(100, 23);
@@ -86,7 +88,7 @@
 			lblRegister.Cursor = Cursors.Hand;
 			lblRegister.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
 			lblRegister.ForeColor = SystemColors.Highlight;
-			lblRegister.Location = new Point(84, 183);
+			lblRegister.Location = new Point(68, 159);
 			lblRegister.Name = "lblRegister";
 			lblRegister.Size = new Size(120, 15);
 			lblRegister.TabIndex = 5;
@@ -99,7 +101,7 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
-			ClientSize = new Size(303, 257);
+			ClientSize = new Size(276, 220);
 			Controls.Add(lblRegister);
 			Controls.Add(txtPass);
 			Controls.Add(txtUser);
