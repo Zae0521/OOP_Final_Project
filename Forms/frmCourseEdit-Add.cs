@@ -286,7 +286,7 @@ namespace OOP_Final_Project_Team3.Forms
 			btnAddCourse.Visible = true;
 			btnInsertCourse.Visible = false;
 			btnUpdate.Visible = true;
-			
+
 		}
 	}
 }

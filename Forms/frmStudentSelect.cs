@@ -55,9 +55,9 @@ namespace OOP_Final_Project_Team3.Forms
 					editInfo.Show();
 					this.Close();
 				}
-					
 
-				
+
+
 			}
 			else
 			{

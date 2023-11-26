@@ -37,7 +37,7 @@
 			// 
 			// btnUpdateUser
 			// 
-			btnUpdateUser.Location = new Point(12, 34);
+			btnUpdateUser.Location = new Point(8, 14);
 			btnUpdateUser.Name = "btnUpdateUser";
 			btnUpdateUser.Size = new Size(185, 23);
 			btnUpdateUser.TabIndex = 1;
@@ -48,7 +48,7 @@
 			// 
 			// btnAddDropCourse
 			// 
-			btnAddDropCourse.Location = new Point(203, 34);
+			btnAddDropCourse.Location = new Point(199, 14);
 			btnAddDropCourse.Name = "btnAddDropCourse";
 			btnAddDropCourse.Size = new Size(166, 23);
 			btnAddDropCourse.TabIndex = 2;
@@ -58,7 +58,7 @@
 			// 
 			// btnEditCourses
 			// 
-			btnEditCourses.Location = new Point(12, 63);
+			btnEditCourses.Location = new Point(33, 43);
 			btnEditCourses.Name = "btnEditCourses";
 			btnEditCourses.Size = new Size(160, 23);
 			btnEditCourses.TabIndex = 3;
@@ -69,7 +69,7 @@
 			// 
 			// btnEditStudentSchedule
 			// 
-			btnEditStudentSchedule.Location = new Point(190, 63);
+			btnEditStudentSchedule.Location = new Point(199, 43);
 			btnEditStudentSchedule.Name = "btnEditStudentSchedule";
 			btnEditStudentSchedule.Size = new Size(148, 23);
 			btnEditStudentSchedule.TabIndex = 4;
@@ -79,7 +79,7 @@
 			// 
 			// btnUpdateStudent
 			// 
-			btnUpdateStudent.Location = new Point(12, 34);
+			btnUpdateStudent.Location = new Point(8, 14);
 			btnUpdateStudent.Name = "btnUpdateStudent";
 			btnUpdateStudent.Size = new Size(185, 23);
 			btnUpdateStudent.TabIndex = 5;
@@ -92,14 +92,14 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(405, 140);
+			ClientSize = new Size(376, 79);
 			Controls.Add(btnEditStudentSchedule);
 			Controls.Add(btnEditCourses);
 			Controls.Add(btnAddDropCourse);
 			Controls.Add(btnUpdateUser);
 			Controls.Add(btnUpdateStudent);
 			Name = "frmMainScreen";
-			Text = "Form1";
+			Text = "Registration Landing Page";
 			Load += frmMainScreen_Load;
 			ResumeLayout(false);
 		}

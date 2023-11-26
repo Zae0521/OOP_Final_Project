@@ -294,7 +294,7 @@
 			Controls.Add(btnUpdate);
 			Controls.Add(dgvCourses);
 			Name = "frmCourseEdit_Add";
-			Text = "frmCourseEdit_Add";
+			Text = "Registration System Course Edit/Add";
 			Load += frmCourseEdit_Add_Load;
 			((System.ComponentModel.ISupportInitialize)dgvCourses).EndInit();
 			((System.ComponentModel.ISupportInitialize)coursesBindingSource).EndInit();

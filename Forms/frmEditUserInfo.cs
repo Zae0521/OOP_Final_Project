@@ -66,19 +66,19 @@ namespace OOP_Final_Project_Team3.Forms
 			if ((txtPassword.Text is not null && txtPassword.Text != "") && (txtUserID.Text is not null && txtUserID.Text != ""))
 			{
 				var newRole = -1;
-					if (chkIsAdmin.Checked) { newRole = 1; } else { newRole = 2; }
+				if (chkIsAdmin.Checked) { newRole = 1; } else { newRole = 2; }
 
-					var sql = $"UPDATE Users set Password = '{txtPassword.Text}', FirstName = '{txtFirst.Text}', LastName = '{txtLast.Text}', role = {newRole}, UserName= '{txtUserID.Text}' WHERE UserName = '{username}'";
+				var sql = $"UPDATE Users set Password = '{txtPassword.Text}', FirstName = '{txtFirst.Text}', LastName = '{txtLast.Text}', role = {newRole}, UserName= '{txtUserID.Text}' WHERE UserName = '{username}'";
 
-					var res = conn.Execute(sql);
+				var res = conn.Execute(sql);
 
-					if (res != null)
-					{
-						MessageBox.Show($"Updated Successfully.");
+				if (res != null)
+				{
+					MessageBox.Show($"Updated Successfully.");
 
-					}
-					else { MessageBox.Show("Account Does Not Exist, or Error in UserName/Password", "Error"); }
-				
+				}
+				else { MessageBox.Show("Account Does Not Exist, or Error in UserName/Password", "Error"); }
+
 			}
 			else
 			{

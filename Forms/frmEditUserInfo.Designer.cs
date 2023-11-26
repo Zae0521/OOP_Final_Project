@@ -43,28 +43,28 @@
 			// txtUserID
 			// 
 			txtUserID.Enabled = false;
-			txtUserID.Location = new Point(256, 35);
+			txtUserID.Location = new Point(107, 29);
 			txtUserID.Name = "txtUserID";
 			txtUserID.Size = new Size(100, 23);
 			txtUserID.TabIndex = 0;
 			// 
 			// txtPassword
 			// 
-			txtPassword.Location = new Point(256, 64);
+			txtPassword.Location = new Point(107, 58);
 			txtPassword.Name = "txtPassword";
 			txtPassword.Size = new Size(100, 23);
 			txtPassword.TabIndex = 1;
 			// 
 			// txtFirst
 			// 
-			txtFirst.Location = new Point(256, 93);
+			txtFirst.Location = new Point(107, 87);
 			txtFirst.Name = "txtFirst";
 			txtFirst.Size = new Size(100, 23);
 			txtFirst.TabIndex = 2;
 			// 
 			// txtLast
 			// 
-			txtLast.Location = new Point(256, 122);
+			txtLast.Location = new Point(107, 116);
 			txtLast.Name = "txtLast";
 			txtLast.Size = new Size(100, 23);
 			txtLast.TabIndex = 3;
@@ -72,7 +72,7 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(206, 38);
+			label1.Location = new Point(57, 32);
 			label1.Name = "label1";
 			label1.Size = new Size(44, 15);
 			label1.TabIndex = 4;
@@ -81,7 +81,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(190, 67);
+			label2.Location = new Point(41, 61);
 			label2.Name = "label2";
 			label2.Size = new Size(60, 15);
 			label2.TabIndex = 5;
@@ -90,7 +90,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(183, 96);
+			label3.Location = new Point(34, 90);
 			label3.Name = "label3";
 			label3.Size = new Size(67, 15);
 			label3.TabIndex = 6;
@@ -99,7 +99,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(187, 125);
+			label4.Location = new Point(38, 119);
 			label4.Name = "label4";
 			label4.Size = new Size(63, 15);
 			label4.TabIndex = 7;
@@ -109,7 +109,7 @@
 			// 
 			chkIsAdmin.AutoSize = true;
 			chkIsAdmin.Enabled = false;
-			chkIsAdmin.Location = new Point(238, 161);
+			chkIsAdmin.Location = new Point(71, 155);
 			chkIsAdmin.Name = "chkIsAdmin";
 			chkIsAdmin.Size = new Size(75, 19);
 			chkIsAdmin.TabIndex = 9;
@@ -118,7 +118,7 @@
 			// 
 			// btnUpdateInfo
 			// 
-			btnUpdateInfo.Location = new Point(220, 208);
+			btnUpdateInfo.Location = new Point(53, 190);
 			btnUpdateInfo.Name = "btnUpdateInfo";
 			btnUpdateInfo.Size = new Size(93, 23);
 			btnUpdateInfo.TabIndex = 10;
@@ -130,7 +130,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(261, 251);
 			Controls.Add(btnUpdateInfo);
 			Controls.Add(chkIsAdmin);
 			Controls.Add(label4);
@@ -142,7 +142,7 @@
 			Controls.Add(txtPassword);
 			Controls.Add(txtUserID);
 			Name = "frmEditUserInfo";
-			Text = "frmEditUserInfo";
+			Text = "Registration User Edit";
 			Load += frmEditUserInfo_Load;
 			ResumeLayout(false);
 			PerformLayout();

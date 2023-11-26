@@ -42,7 +42,7 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(393, 73);
+			label1.Location = new Point(11, 17);
 			label1.Name = "label1";
 			label1.Size = new Size(68, 15);
 			label1.TabIndex = 0;
@@ -51,7 +51,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(401, 113);
+			label2.Location = new Point(19, 57);
 			label2.Name = "label2";
 			label2.Size = new Size(60, 15);
 			label2.TabIndex = 1;
@@ -60,7 +60,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(394, 153);
+			label3.Location = new Point(12, 97);
 			label3.Name = "label3";
 			label3.Size = new Size(67, 15);
 			label3.TabIndex = 2;
@@ -69,7 +69,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(395, 193);
+			label4.Location = new Point(13, 137);
 			label4.Name = "label4";
 			label4.Size = new Size(66, 15);
 			label4.TabIndex = 3;
@@ -77,35 +77,35 @@
 			// 
 			// txtLastName
 			// 
-			txtLastName.Location = new Point(467, 190);
+			txtLastName.Location = new Point(85, 134);
 			txtLastName.Name = "txtLastName";
 			txtLastName.Size = new Size(100, 23);
 			txtLastName.TabIndex = 3;
 			// 
 			// txtFrstName
 			// 
-			txtFrstName.Location = new Point(467, 150);
+			txtFrstName.Location = new Point(85, 94);
 			txtFrstName.Name = "txtFrstName";
 			txtFrstName.Size = new Size(100, 23);
 			txtFrstName.TabIndex = 2;
 			// 
 			// txtPass
 			// 
-			txtPass.Location = new Point(467, 110);
+			txtPass.Location = new Point(85, 54);
 			txtPass.Name = "txtPass";
 			txtPass.Size = new Size(100, 23);
 			txtPass.TabIndex = 1;
 			// 
 			// txtUser
 			// 
-			txtUser.Location = new Point(467, 70);
+			txtUser.Location = new Point(85, 14);
 			txtUser.Name = "txtUser";
 			txtUser.Size = new Size(100, 23);
 			txtUser.TabIndex = 0;
 			// 
 			// btnRegister
 			// 
-			btnRegister.Location = new Point(439, 247);
+			btnRegister.Location = new Point(51, 178);
 			btnRegister.Name = "btnRegister";
 			btnRegister.Size = new Size(75, 23);
 			btnRegister.TabIndex = 4;
@@ -118,7 +118,7 @@
 			AcceptButton = btnRegister;
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(207, 217);
 			Controls.Add(btnRegister);
 			Controls.Add(txtUser);
 			Controls.Add(txtPass);
@@ -129,7 +129,7 @@
 			Controls.Add(label2);
 			Controls.Add(label1);
 			Name = "frmRegister";
-			Text = "frmRegister";
+			Text = "Register Screen";
 			ResumeLayout(false);
 			PerformLayout();
 		}
