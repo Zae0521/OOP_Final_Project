@@ -53,6 +53,8 @@
 			txtEndDate = new TextBox();
 			label7 = new Label();
 			txtTitle = new TextBox();
+			btnAddCourse = new Button();
+			btnInsertCourse = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvCourses).BeginInit();
 			((System.ComponentModel.ISupportInitialize)coursesBindingSource).BeginInit();
 			SuspendLayout();
@@ -128,10 +130,10 @@
 			// 
 			// btnUpdate
 			// 
-			btnUpdate.Location = new Point(345, 466);
+			btnUpdate.Location = new Point(474, 466);
 			btnUpdate.Name = "btnUpdate";
 			btnUpdate.Size = new Size(97, 23);
-			btnUpdate.TabIndex = 1;
+			btnUpdate.TabIndex = 9;
 			btnUpdate.Text = "Update Course";
 			btnUpdate.UseVisualStyleBackColor = true;
 			btnUpdate.Click += btnUpdate_Click;
@@ -141,7 +143,7 @@
 			txtCourseID.Location = new Point(210, 385);
 			txtCourseID.Name = "txtCourseID";
 			txtCourseID.Size = new Size(100, 23);
-			txtCourseID.TabIndex = 2;
+			txtCourseID.TabIndex = 1;
 			// 
 			// label1
 			// 
@@ -166,7 +168,7 @@
 			txtSectionID.Location = new Point(385, 385);
 			txtSectionID.Name = "txtSectionID";
 			txtSectionID.Size = new Size(100, 23);
-			txtSectionID.TabIndex = 4;
+			txtSectionID.TabIndex = 2;
 			// 
 			// label3
 			// 
@@ -182,12 +184,12 @@
 			txtProfessor.Location = new Point(740, 385);
 			txtProfessor.Name = "txtProfessor";
 			txtProfessor.Size = new Size(100, 23);
-			txtProfessor.TabIndex = 6;
+			txtProfessor.TabIndex = 4;
 			// 
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(116, 427);
+			label4.Location = new Point(207, 428);
 			label4.Name = "label4";
 			label4.Size = new Size(88, 15);
 			label4.TabIndex = 9;
@@ -195,15 +197,15 @@
 			// 
 			// txtMeetingTimes
 			// 
-			txtMeetingTimes.Location = new Point(210, 424);
+			txtMeetingTimes.Location = new Point(301, 425);
 			txtMeetingTimes.Name = "txtMeetingTimes";
 			txtMeetingTimes.Size = new Size(100, 23);
-			txtMeetingTimes.TabIndex = 8;
+			txtMeetingTimes.TabIndex = 5;
 			// 
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(316, 427);
+			label5.Location = new Point(407, 428);
 			label5.Name = "label5";
 			label5.Size = new Size(61, 15);
 			label5.TabIndex = 11;
@@ -211,15 +213,15 @@
 			// 
 			// txtStartDate
 			// 
-			txtStartDate.Location = new Point(383, 424);
+			txtStartDate.Location = new Point(474, 425);
 			txtStartDate.Name = "txtStartDate";
 			txtStartDate.Size = new Size(100, 23);
-			txtStartDate.TabIndex = 10;
+			txtStartDate.TabIndex = 6;
 			// 
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(489, 427);
+			label6.Location = new Point(580, 428);
 			label6.Name = "label6";
 			label6.Size = new Size(57, 15);
 			label6.TabIndex = 13;
@@ -227,10 +229,10 @@
 			// 
 			// txtEndDate
 			// 
-			txtEndDate.Location = new Point(552, 424);
+			txtEndDate.Location = new Point(643, 425);
 			txtEndDate.Name = "txtEndDate";
 			txtEndDate.Size = new Size(100, 23);
-			txtEndDate.TabIndex = 12;
+			txtEndDate.TabIndex = 7;
 			// 
 			// label7
 			// 
@@ -246,13 +248,35 @@
 			txtTitle.Location = new Point(525, 385);
 			txtTitle.Name = "txtTitle";
 			txtTitle.Size = new Size(144, 23);
-			txtTitle.TabIndex = 14;
+			txtTitle.TabIndex = 3;
+			// 
+			// btnAddCourse
+			// 
+			btnAddCourse.Location = new Point(371, 466);
+			btnAddCourse.Name = "btnAddCourse";
+			btnAddCourse.Size = new Size(97, 23);
+			btnAddCourse.TabIndex = 8;
+			btnAddCourse.Text = "Add Course";
+			btnAddCourse.UseVisualStyleBackColor = true;
+			btnAddCourse.Click += btnAddCourse_Click;
+			// 
+			// btnInsertCourse
+			// 
+			btnInsertCourse.Location = new Point(371, 466);
+			btnInsertCourse.Name = "btnInsertCourse";
+			btnInsertCourse.Size = new Size(97, 23);
+			btnInsertCourse.TabIndex = 8;
+			btnInsertCourse.Text = "Insert Course";
+			btnInsertCourse.UseVisualStyleBackColor = true;
+			btnInsertCourse.Click += btnInsertCourse_Click;
 			// 
 			// frmCourseEdit_Add
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(955, 501);
+			Controls.Add(btnAddCourse);
+			Controls.Add(btnInsertCourse);
 			Controls.Add(label7);
 			Controls.Add(txtTitle);
 			Controls.Add(label6);
@@ -305,5 +329,7 @@
 		private DataGridViewTextBoxColumn SectionID;
 		private Label label7;
 		private TextBox txtTitle;
+		private Button btnAddCourse;
+		private Button btnInsertCourse;
 	}
 }

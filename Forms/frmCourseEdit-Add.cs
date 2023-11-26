@@ -32,6 +32,7 @@ namespace OOP_Final_Project_Team3.Forms
 		string oldSection;
 
 		bool fload = true;
+		bool fload2 = false;
 
 		public frmCourseEdit_Add()
 		{
@@ -86,15 +87,19 @@ namespace OOP_Final_Project_Team3.Forms
 				}
 				else
 				{
-					if (MessageBox.Show("Data has been changed do you want to save.", "Error", MessageBoxButtons.YesNo) == DialogResult.Yes)
+					if (!fload2)
 					{
-						update();
-						fetch();
+						if (MessageBox.Show("Data has been changed do you want to save.", "Error", MessageBoxButtons.YesNo) == DialogResult.Yes)
+						{
+							update();
+							fetch();
+						}
+						else
+						{
+							fetch();
+						}
 					}
-					else
-					{
-						fetch();
-					}
+					fload2 = false;
 				}
 				courseidd = txtCourseID.Text;
 				section = txtSectionID.Text;
@@ -201,6 +206,87 @@ namespace OOP_Final_Project_Team3.Forms
 			start = txtStartDate.Text;
 			end = txtEndDate.Text;
 
+		}
+
+		private void btnAddCourse_Click(object sender, EventArgs e)
+		{
+			txtCourseID.Clear();
+			txtSectionID.Clear();
+			txtTitle.Clear();
+			txtProfessor.Clear();
+			txtMeetingTimes.Clear();
+			txtStartDate.Clear();
+			txtEndDate.Clear();
+
+			btnAddCourse.Visible = false;
+			btnInsertCourse.Visible = true;
+			btnUpdate.Visible = false;
+
+		}
+
+		private async void btnInsertCourse_Click(object sender, EventArgs e)
+		{
+			fload = true;
+			fload2 = true;
+			await using var conn = new SqliteConnection($"Data Source={db}");
+
+			if ((courseidd is not null && courseidd != "") && (section is not null && section != ""))
+			{
+
+				var sql = $"INSERT INTO Courses VALUES ('{txtCourseID.Text}', '{txtSectionID.Text}', '{txtTitle.Text}', '{txtProfessor.Text}', '{txtMeetingTimes.Text}', '{txtStartDate.Text}', '{txtEndDate.Text}')";
+
+				var res = conn.Execute(sql);
+
+				if (res != null)
+				{
+					MessageBox.Show($"Inserted Successfully.");
+
+				}
+				else { MessageBox.Show("Error", "Error"); }
+
+				await using var conn2 = new SqliteConnection($"Data Source={db}");
+
+				var sql2 = $"SELECT * FROM Courses ORDER BY CourseID ASC, SectionID ASC";
+
+				var res2 = conn2.QueryAsync<Courses>(sql2);
+				List<Courses> uData = res2.Result.ToList();
+
+				dgvCourses.DataSource = uData;
+
+				var courseid = dgvCourses.CurrentRow.Cells[0].Value.ToString();
+				var sectionid = dgvCourses.CurrentRow.Cells[1].Value.ToString();
+
+				await using var conn3 = new SqliteConnection($"Data Source={db}");
+				var sql3 = $"SELECT * FROM Courses WHERE CourseID = '{courseid}' AND SectionID = '{sectionid}'";
+
+				var res3 = await conn.QueryAsync<Courses>(sql3);
+
+				txtCourseID.Text = res3.First().CourseID;
+				txtSectionID.Text = res3.First().SectionID.ToString();
+				txtTitle.Text = res3.First().CourseTitle;
+				txtProfessor.Text = res3.First().Professor;
+				txtMeetingTimes.Text = res3.First().MeetingTimes;
+				txtStartDate.Text = res3.First().StartDate;
+				txtEndDate.Text = res3.First().EndDate;
+
+				courseidd = txtCourseID.Text;
+				section = txtSectionID.Text;
+				title = txtTitle.Text;
+				prof = txtProfessor.Text;
+				meeting = txtMeetingTimes.Text;
+				start = txtStartDate.Text;
+				end = txtEndDate.Text;
+
+			}
+			else
+			{
+				MessageBox.Show("Course and Section are required for a new course", "Insert Error");
+			}
+
+			btnAddCourse.Visible = true;
+			btnInsertCourse.Visible = false;
+			btnUpdate.Visible = true;
+			
 		}
 	}
 }
