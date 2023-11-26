@@ -31,23 +31,26 @@
 			btnUpdateUser = new Button();
 			btnAddDropCourse = new Button();
 			btnEditCourses = new Button();
+			btnEditStudentSchedule = new Button();
+			btnUpdateStudent = new Button();
 			SuspendLayout();
 			// 
 			// btnUpdateUser
 			// 
-			btnUpdateUser.Location = new Point(124, 107);
+			btnUpdateUser.Location = new Point(12, 34);
 			btnUpdateUser.Name = "btnUpdateUser";
-			btnUpdateUser.Size = new Size(160, 23);
+			btnUpdateUser.Size = new Size(185, 23);
 			btnUpdateUser.TabIndex = 1;
 			btnUpdateUser.Text = "Update User Information";
 			btnUpdateUser.UseVisualStyleBackColor = true;
 			btnUpdateUser.Visible = false;
+			btnUpdateUser.Click += btnUpdateUser_Click;
 			// 
 			// btnAddDropCourse
 			// 
-			btnAddDropCourse.Location = new Point(302, 107);
+			btnAddDropCourse.Location = new Point(203, 34);
 			btnAddDropCourse.Name = "btnAddDropCourse";
-			btnAddDropCourse.Size = new Size(148, 23);
+			btnAddDropCourse.Size = new Size(166, 23);
 			btnAddDropCourse.TabIndex = 2;
 			btnAddDropCourse.Text = "Add/Drop Courses";
 			btnAddDropCourse.UseVisualStyleBackColor = true;
@@ -55,22 +58,45 @@
 			// 
 			// btnEditCourses
 			// 
-			btnEditCourses.Location = new Point(205, 149);
+			btnEditCourses.Location = new Point(12, 63);
 			btnEditCourses.Name = "btnEditCourses";
-			btnEditCourses.Size = new Size(172, 23);
+			btnEditCourses.Size = new Size(160, 23);
 			btnEditCourses.TabIndex = 3;
 			btnEditCourses.Text = "Edit Courses";
 			btnEditCourses.UseVisualStyleBackColor = true;
 			btnEditCourses.Visible = false;
 			// 
+			// btnEditStudentSchedule
+			// 
+			btnEditStudentSchedule.Location = new Point(190, 63);
+			btnEditStudentSchedule.Name = "btnEditStudentSchedule";
+			btnEditStudentSchedule.Size = new Size(148, 23);
+			btnEditStudentSchedule.TabIndex = 4;
+			btnEditStudentSchedule.Text = "Edit Student Schedule";
+			btnEditStudentSchedule.UseVisualStyleBackColor = true;
+			btnEditStudentSchedule.Visible = false;
+			// 
+			// btnUpdateStudent
+			// 
+			btnUpdateStudent.Location = new Point(12, 34);
+			btnUpdateStudent.Name = "btnUpdateStudent";
+			btnUpdateStudent.Size = new Size(185, 23);
+			btnUpdateStudent.TabIndex = 5;
+			btnUpdateStudent.Text = "Update Student Information";
+			btnUpdateStudent.UseVisualStyleBackColor = true;
+			btnUpdateStudent.Visible = false;
+			btnUpdateStudent.Click += btnUpdateStudent_Click;
+			// 
 			// frmMainScreen
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(405, 140);
+			Controls.Add(btnEditStudentSchedule);
 			Controls.Add(btnEditCourses);
 			Controls.Add(btnAddDropCourse);
 			Controls.Add(btnUpdateUser);
+			Controls.Add(btnUpdateStudent);
 			Name = "frmMainScreen";
 			Text = "Form1";
 			Load += frmMainScreen_Load;
@@ -82,5 +108,7 @@
 		private Button btnUpdateUser;
 		private Button btnAddDropCourse;
 		private Button btnEditCourses;
+		private Button btnEditStudentSchedule;
+		private Button btnUpdateStudent;
 	}
 }

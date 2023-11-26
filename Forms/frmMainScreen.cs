@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP_Final_Project_Team3.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace OOP_Final_Project_Team3
 		public string frstname;
 		public string lastname;
 		public int role;
+		public User User { get; set; }
 
 		public frmMainScreen(User usr)
 		{
@@ -26,6 +28,7 @@ namespace OOP_Final_Project_Team3
 			lastname = usr.LastName;
 			frstname = usr.FirstName;
 			role = usr.Role;
+			User = usr;
 		}
 
 		private void frmMainScreen_Load(object sender, EventArgs e)
@@ -34,13 +37,32 @@ namespace OOP_Final_Project_Team3
 			{
 				btnAddDropCourse.Visible = true;
 				btnUpdateUser.Visible = true;
+				btnUpdateStudent.Visible = false;
 				btnEditCourses.Visible = false;
+				btnEditStudentSchedule.Visible = false;
 			}
-			else if (role == 1) {
+			else if (role == 1)
+			{
 				btnAddDropCourse.Visible = false;
 				btnUpdateUser.Visible = false;
+				btnUpdateStudent.Visible = true;
 				btnEditCourses.Visible = true;
+				btnEditStudentSchedule.Visible = true;
 			}
+		}
+
+		private void btnUpdateUser_Click(object sender, EventArgs e)
+		{
+			frmEditUserInfo edit = new frmEditUserInfo(User, "student");
+			edit.ShowDialog();
+			this.Close();
+		}
+
+		private void btnUpdateStudent_Click(object sender, EventArgs e)
+		{
+			frmStudentSelect studentSelect = new frmStudentSelect();
+			studentSelect.ShowDialog();
+			this.Close();
 		}
 	}
 }

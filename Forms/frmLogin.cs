@@ -34,18 +34,22 @@ namespace OOP_Final_Project_Team3
 
 				if (res != null)
 				{
-					//MessageBox.Show($"{res.First().FirstName} { res.First().LastName} {res.First().UserName} {res.First().Password} {res.First().Role}");
-					LoginUsr = res.First();
-					frmMainScreen main = new frmMainScreen(LoginUsr);
-					this.Hide();
-					main.Show();
+					try
+					{
+						//MessageBox.Show($"{res.First().FirstName} { res.First().LastName} {res.First().UserName} {res.First().Password} {res.First().Role}");
+						LoginUsr = res.First();
+						frmMainScreen main = new frmMainScreen(LoginUsr);
+						this.Hide();
+						main.Show();
+					}
+					catch (Exception ex) { MessageBox.Show("Account Does Not Exist, or Error in UserName/Password", "Error"); }
 				}
 				else { MessageBox.Show("Account Does Not Exist, or Error in UserName/Password", "Error"); }
 
 			}
 			else
 			{
-				MessageBox.Show("Please insert both a UserName and Password!", "Login Error"); 
+				MessageBox.Show("Please insert both a UserName and Password!", "Login Error");
 			}
 
 
