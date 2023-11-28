@@ -126,13 +126,17 @@ namespace OOP_Final_Project_Team3.Forms
 
 			var res = conn.QueryAsync<Courses>(sql);
 
-			txtCourseID.Text = res.Result.First().CourseID;
-			txtSectionID.Text = res.Result.First().SectionID.ToString();
-			txtTitle.Text = res.Result.First().CourseTitle;
-			txtProfessor.Text = res.Result.First().Professor;
-			txtMeetingTimes.Text = res.Result.First().MeetingTimes;
-			txtStartDate.Text = res.Result.First().StartDate;
-			txtEndDate.Text = res.Result.First().EndDate;
+			try
+			{
+				txtCourseID.Text = res.Result.First().CourseID;
+				txtSectionID.Text = res.Result.First().SectionID.ToString();
+				txtTitle.Text = res.Result.First().CourseTitle;
+				txtProfessor.Text = res.Result.First().Professor;
+				txtMeetingTimes.Text = res.Result.First().MeetingTimes;
+				txtStartDate.Text = res.Result.First().StartDate;
+				txtEndDate.Text = res.Result.First().EndDate;
+			}
+			catch (Exception ex) { }
 		}
 
 		private void btnUpdate_Click(object sender, EventArgs e)
@@ -221,6 +225,7 @@ namespace OOP_Final_Project_Team3.Forms
 			btnAddCourse.Visible = false;
 			btnInsertCourse.Visible = true;
 			btnUpdate.Visible = false;
+			btnDeleteCourse.Visible = false;
 
 		}
 
@@ -286,6 +291,34 @@ namespace OOP_Final_Project_Team3.Forms
 			btnAddCourse.Visible = true;
 			btnInsertCourse.Visible = false;
 			btnUpdate.Visible = true;
+			btnDeleteCourse.Visible = true;
+
+
+		}
+
+		private async void btnDeleteCourse_Click(object sender, EventArgs e)
+		{
+			var courseid = dgvCourses.CurrentRow.Cells[0].Value.ToString();
+			var sectionid = dgvCourses.CurrentRow.Cells[1].Value.ToString();
+
+			await using var conn = new SqliteConnection($"Data Source={db}");
+
+			var sql = $"DELETE FROM Courses WHERE CourseID = '{courseid}' AND SectionID = '{sectionid}'";
+			var sqlschdel = $"DELETE FROM StudentSchedule WHERE CourseID = '{courseid}' AND SectionID = '{SectionID}'";
+
+			var res = conn.Execute(sql);
+			var resschdel = conn.Execute(sqlschdel);
+
+			if (res != null)
+			{
+				MessageBox.Show("Course Deleted!");
+				var sql2 = $"SELECT * FROM Courses ORDER BY CourseID ASC, SectionID ASC";
+
+				var res2 = conn.QueryAsync<Courses>(sql2);
+				List<Courses> uData = res2.Result.ToList();
+
+				dgvCourses.DataSource = uData;
+			}
 
 		}
 	}

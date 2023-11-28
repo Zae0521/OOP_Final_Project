@@ -56,6 +56,7 @@
 			txtTitle = new TextBox();
 			btnAddCourse = new Button();
 			btnInsertCourse = new Button();
+			btnDeleteCourse = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvCourses).BeginInit();
 			((System.ComponentModel.ISupportInitialize)coursesBindingSource).BeginInit();
 			SuspendLayout();
@@ -143,7 +144,7 @@
 			// 
 			btnUpdate.Image = Properties.Resources.refresh__1_;
 			btnUpdate.ImageAlign = ContentAlignment.MiddleLeft;
-			btnUpdate.Location = new Point(474, 466);
+			btnUpdate.Location = new Point(422, 470);
 			btnUpdate.Name = "btnUpdate";
 			btnUpdate.Size = new Size(128, 32);
 			btnUpdate.TabIndex = 9;
@@ -267,7 +268,7 @@
 			// 
 			btnAddCourse.Image = Properties.Resources.add__1_;
 			btnAddCourse.ImageAlign = ContentAlignment.MiddleLeft;
-			btnAddCourse.Location = new Point(349, 466);
+			btnAddCourse.Location = new Point(297, 470);
 			btnAddCourse.Name = "btnAddCourse";
 			btnAddCourse.Size = new Size(119, 32);
 			btnAddCourse.TabIndex = 8;
@@ -279,7 +280,7 @@
 			// 
 			btnInsertCourse.Image = Properties.Resources.above;
 			btnInsertCourse.ImageAlign = ContentAlignment.MiddleRight;
-			btnInsertCourse.Location = new Point(349, 466);
+			btnInsertCourse.Location = new Point(297, 470);
 			btnInsertCourse.Name = "btnInsertCourse";
 			btnInsertCourse.Size = new Size(119, 32);
 			btnInsertCourse.TabIndex = 8;
@@ -287,12 +288,25 @@
 			btnInsertCourse.UseVisualStyleBackColor = true;
 			btnInsertCourse.Click += btnInsertCourse_Click;
 			// 
+			// btnDeleteCourse
+			// 
+			btnDeleteCourse.Image = Properties.Resources.remove;
+			btnDeleteCourse.ImageAlign = ContentAlignment.MiddleLeft;
+			btnDeleteCourse.Location = new Point(556, 470);
+			btnDeleteCourse.Name = "btnDeleteCourse";
+			btnDeleteCourse.Size = new Size(128, 32);
+			btnDeleteCourse.TabIndex = 16;
+			btnDeleteCourse.Text = "Delete Course";
+			btnDeleteCourse.UseVisualStyleBackColor = true;
+			btnDeleteCourse.Click += btnDeleteCourse_Click;
+			// 
 			// frmCourseEdit_Add
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(215, 192, 255);
 			ClientSize = new Size(955, 514);
+			Controls.Add(btnDeleteCourse);
 			Controls.Add(btnAddCourse);
 			Controls.Add(btnInsertCourse);
 			Controls.Add(label7);
@@ -351,5 +365,6 @@
 		private TextBox txtTitle;
 		private Button btnAddCourse;
 		private Button btnInsertCourse;
+		private Button btnDeleteCourse;
 	}
 }
