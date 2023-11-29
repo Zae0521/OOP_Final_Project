@@ -47,7 +47,6 @@ namespace OOP_Final_Project_Team3.Forms
 
 			// all code above this
 
-			new frmLogin().Show();
 			this.Close();
 		}
 	}
