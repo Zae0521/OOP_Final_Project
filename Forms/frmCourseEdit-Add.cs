@@ -157,7 +157,7 @@ namespace OOP_Final_Project_Team3.Forms
 			start = txtStartDate.Text;
 			end = txtEndDate.Text;
 
-			if ((courseidd is not null && courseidd != "") && (section is not null && section != ""))
+			if ((courseidd is not null && courseidd != "" && courseidd != " ") && (section is not null && section != "" && section != " "))
 			{
 
 				var sql = $"UPDATE Courses set CourseID = '{courseidd}', SectionID = '{section}', CourseTitle = '{title}', Professor='{prof}', MeetingTimes = '{meeting}', StartDate ='{start}', EndDate = '{end}' WHERE CourseID = '{oldCourse}' AND SectionID = '{oldSection}'";
@@ -235,7 +235,7 @@ namespace OOP_Final_Project_Team3.Forms
 			fload2 = true;
 			await using var conn = new SqliteConnection($"Data Source={db}");
 
-			if ((courseidd is not null && courseidd != "") && (section is not null && section != ""))
+			if ((courseidd is not null && courseidd != "" && courseidd != " ") && (section is not null && section != "" && section != " "))
 			{
 
 				var sql = $"INSERT INTO Courses VALUES ('{txtCourseID.Text}', '{txtSectionID.Text}', '{txtTitle.Text}', '{txtProfessor.Text}', '{txtMeetingTimes.Text}', '{txtStartDate.Text}', '{txtEndDate.Text}')";

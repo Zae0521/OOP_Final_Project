@@ -25,7 +25,7 @@ namespace OOP_Final_Project_Team3
 		{
 			await using var conn = new SqliteConnection($"Data Source={db}");
 
-			if ((txtPass.Text is not null && txtPass.Text != "") && (txtUser.Text is not null && txtUser.Text != ""))
+			if ((txtPass.Text is not null && txtPass.Text != "" && txtPass.Text != " ") && (txtUser.Text is not null && txtUser.Text != "" && txtUser.Text != " "))
 			{
 				var sql = $"SELECT * FROM Users WHERE UserName = '{txtUser.Text}' AND Password = '{txtPass.Text}'";
 

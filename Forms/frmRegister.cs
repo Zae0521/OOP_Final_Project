@@ -27,7 +27,7 @@ namespace OOP_Final_Project_Team3.Forms
 		{
 			await using var conn = new SqliteConnection($"Data Source={db}");
 
-			if ((txtPass.Text is not null && txtPass.Text != "") && (txtUser.Text is not null && txtUser.Text != "") && (txtFrstName.Text is not null && txtFrstName.Text != "") && (txtLastName.Text is not null && txtLastName.Text != ""))
+			if ((txtPass.Text is not null && txtPass.Text != "" && txtPass.Text != " ") && (txtUser.Text is not null && txtUser.Text != "" && txtUser.Text != " ") && (txtFrstName.Text is not null && txtFrstName.Text != "" && txtFrstName.Text != " ") && (txtLastName.Text is not null && txtLastName.Text != "" && txtLastName.Text != " "))
 			{
 				var sql = $"INSERT INTO Users VALUES( '{txtUser.Text}', '{txtPass.Text}', '{txtFrstName.Text}', '{txtLastName.Text}', 2)";
 

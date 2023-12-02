@@ -43,7 +43,7 @@ namespace OOP_Final_Project_Team3.Forms
 				var userName = dgvStudentSchSelect.CurrentRow.Cells[0].Value.ToString();
 				await using var conn = new SqliteConnection($"Data Source={db}");
 
-				var sql = $"SELECT * FROM Users WHERE UserName = '{userName}'";
+				var sql = $"SELECT * FROM Users WHERE UserName = '{userName}' where username != '' and username != ' ' and username is not null";
 
 				var res = await conn.QueryAsync<User>(sql);
 

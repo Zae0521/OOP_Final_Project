@@ -65,7 +65,7 @@ namespace OOP_Final_Project_Team3.Forms
 		{
 			await using var conn = new SqliteConnection($"Data Source={db}");
 
-			if ((txtPassword.Text is not null && txtPassword.Text != "") && (txtUserID.Text is not null && txtUserID.Text != ""))
+			if ((txtPassword.Text is not null && txtPassword.Text != "" && txtPassword.Text != " ") && (txtUserID.Text is not null && txtUserID.Text != "" && txtUserID.Text != " "))
 			{
 				var newRole = -1;
 				if (chkIsAdmin.Checked) { newRole = 1; } else { newRole = 2; }
